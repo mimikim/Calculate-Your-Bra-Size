@@ -185,12 +185,13 @@ Men can use this too, if they are curious =)
                 var cup_sizes = ['A', 'B', 'C', 'D', 'DD', 'E', 'F', 'FF', 'G', 'GG', 'H', 'HH', 'J', 'JJ', 'K', 'KK', 'L', 'LL', 'M', 'MM', 'N', 'O', 'OO'],
                     bust = Math.ceil(bust_input.value),
                     ribs =  Math.ceil(ribs_input.value),
-                    difference = ( bust - ribs ) - 1;
+                    difference = ( bust - ribs ) - 1,
+                    results_div = document.getElementById('bra-results');
 
                 if ( cup_sizes[difference] == null ) {
-                    document.getElementById('bra-results').innerHTML = 'Your size is out-of-range! Please try again.';
+                    results_div.innerHTML = 'Your size is out-of-range! Please try again.';
                 } else {
-                    document.getElementById('bra-results').innerHTML = 'Your Calculated Size is: <span>' + ribs + cup_sizes[difference] + '</span>';
+                    results_div.innerHTML = 'Your Calculated Size is: <span>' + ribs + cup_sizes[difference] + '</span>';
                 }
             }
         });
