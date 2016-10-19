@@ -29,7 +29,6 @@ gulp.task('sass', function() {
 
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
-    gulp.src(['assets/js/vendor/**']).pipe(gulp.dest('dist/js/vendor'));
     return gulp.src('assets/js/*.js')
         .pipe(rename('script.min.js'))
         .pipe(uglify())
